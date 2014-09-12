@@ -13,7 +13,7 @@ class PlacesController < ApplicationController
 
 	def create
 		Place.create(place_params)
-		redirect_to_root_path
+		redirect_to root_path
 	end
 
 	def create
