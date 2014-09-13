@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-	before_action :authenticate_user!, :only => [:new, :create]
+	before_action :authenticate_user!, :only => [:new, :create, :edit]
 	
 	def index
 		@places = Place.all
@@ -27,6 +27,10 @@ class PlacesController < ApplicationController
 
 	def edit
 		@place = Place.find(params[:id])
+
+		if @place.user != current_user
+			return render :text => 'You are not allowed to perform this operation', :status => :forbidden
+		end
 	end
 
 	def update
