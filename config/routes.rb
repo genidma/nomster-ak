@@ -55,8 +55,11 @@ Nomster::Application.routes.draw do
   #     resources :products
   #   end
   root 'places#index'
+  resources :places do
+    resources :comments, :only => :create
+  end
 
-  resources :places
+  
 
     # The priority is based upon order of creation: first created -> highest priotity.
     # Most comments here ........
