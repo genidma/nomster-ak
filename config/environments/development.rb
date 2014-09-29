@@ -7,8 +7,8 @@ Nomster::Application.configure do
     domain: "example.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV['Adeelfireh@gmail.com'],
-    password: ENV['9089087679HOOHA*']
+    user_name: ENV['GMAIL_ADDRESS'],
+    password: ENV['GMAIL_PASSWORD']
   }
 
    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
