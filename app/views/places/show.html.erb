@@ -3,6 +3,10 @@
 	<i><%= @place.address %></i>
 	<br/><br/>
 	<p><%= @place.description %></p>
+
+  <% @place.photos.each do |photo| %>
+    <%=image_tag photo.Picture %>
+  <% end %>
   
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>

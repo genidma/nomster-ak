@@ -1,0 +1,8 @@
+<div class="col-xs-10 col-xs-offset-1 booyah-box"> 
+	<h1>Add a photo for <%=@place.name %></h1>
+	<%= simple_form_for @photo, :url =>place_photos_path(@place) do |f| %>
+	  <%= f.input :Picture %>
+	  <%= f.input :caption %>
+	  <%= f.submit "Add a photo", :class => 'btn btn-primary' %>
+	<% end %> 
+</div>
