@@ -59,6 +59,7 @@ Nomster::Application.routes.draw do
     resources :photos, :only => [:new, :create]
     resources :comments, :only => :create
   end
+    resources :users, :only => :show
 
   
 
